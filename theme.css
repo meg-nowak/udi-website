@@ -1,24 +1,17 @@
-#container{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-}
-
-#splash{
-    height: 80px;
+#wrapper{
+    width: 1300px;
 }
 
 #header{
-    width: 70vw;
+    visibility: visible;
     height: 96px;
     background-color: #F7F9F9;
     border-bottom: 1px solid #CBCCCC;
 }
 
 .nav{
-    width: 24%;
+    width: 12%;
     font-family: Calibri;
     color: #171717;
     height: 99%;
