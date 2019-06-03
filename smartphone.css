@@ -1,18 +1,17 @@
 body{
     background-color: #A0EBE6;
+    padding: 0;
+    margin: 0;
 }
+
 #container{
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
 }
-
-#wrapper{
-    background-color: #F7F9F9;
-    width: 1300px;
-}
-
 
 #header{
     visibility: hidden;
@@ -25,4 +24,7 @@ body{
     color: #CBCCCC;
     font-family: Calibri;
     width: 100%;
+}
+.content1{
+    height: 900px;
 }

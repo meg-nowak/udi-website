@@ -1,14 +1,12 @@
 #splash{
-    height: 50vh;
-    background-image: url("sample.jpg");
+    height: 100vh;
     background-repeat: no-repeat;
-    background-size: auto;
     font-family: Calibri;
+    width: 100%;
+    background-image: url("assets/Main Page Maybe (2).png");
+    background-size: cover;
 }
 
-#wrapper{
-    width: 100%;
-}
 
 #header{
     visibility: visible;
