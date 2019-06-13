@@ -7,6 +7,7 @@
 
 .nav{
     width: 12%;
+    display: inline-flex;
     font-family: Calibri;
     color: #171717;
     height: 99%;
