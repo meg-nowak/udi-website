@@ -6,41 +6,100 @@
 
 <head>
     <meta charset="UTF-8">
+
     <title>udi</title>
-    <!-- JQuery and Bootstrap -->
+
+    <!--JQuery and bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--responsive stylesheets-->
     <link rel="stylesheet" type="text/css" href="smartphone.css"/>
     <link rel="stylesheet" type="text/css" href="responsive.css" media="screen and (min-width: 900px)"/>
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/Udi Favicon 2.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--i can also add in search engine optimisation data if needed. -->
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/Udi Favicon 2.png"/>
+
+    <!--search engine data-->
     <meta name="description" content="Udi is a platform that connects students with tutors. We offer in-person tutoring in Auckland and online tutoring for students across the country.">
     <meta name="author" content="Udi">
+
+    <!--page specific styles-->
+    <style>
+
+        #splash{
+            background-image: url("assets/Main Page Maybe (2).png");
+        }
+
+        #comparison{
+            text-align: center;
+            display: inline-flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        .compare>h2{
+            font-family: 'Bree Serif';
+            color: coral;
+            font-size: 40px;
+        }
+
+    </style>
+
 </head>
 
 <body>
     <div id="container">
 
-        <div id="smartphone-nav"><button type="button" class="btn btn-default btn-sm" id="hamburger-menu"></div>
+        <!--smartphone navigation (only visible on the smartphone version of the website)-->
+        <div id="smartphone-nav">
+            <button type="button" class="btn btn-default btn-sm" id="hamburger-menu">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </a>
+                <nav class="dropdown-menu" id="dropdown">
+                    <a href="index.html" class="sm-nav" id="active">Home</a>
+                    <a href="#" class="sm-nav">Our Mission</a>
+                    <a href="#" class="sm-nav">Our Tutors</a>
+                    <a href="#" class="sm-nav">Pricing and Plans</a>
+                    <a href="#" class="sm-nav">Contact Us</a>
+                    <a href="#" class="sm-nav">Join Us</a>
+                    <a href="#" class="sm-nav">Terms and Policies</a>
+                    <a href="#" class="sm-nav">Free Consultation</a>
+                </nav>
+            </button>
+        </div>
 
-            <!--navigation-->
+            <!--desktop navigation-->
         <div id="header">
-            <img src="assets/Udi Main 1.png" id="logo"/>
+            <img src="assets/Udi Main 1.png" id="logo" alt="Udi Logo"/>
             <span class="nav" id="active">Home</span>
             <span class="nav">Our Mission</span>
             <span class="nav">Our Tutors</span>
             <span class="nav">Pricing and Plans</span>
             <span class="nav">Contact Us</span>
-            <span class="nav">Joining us</span>
+            <span class="nav">Join us</span>
             <span class="nav">Terms and Policies</span>
             <span class="nav">Free Consultation</span>
         </div>
 
-        <div id="splash"><img src="assets/Udi Main 1.png" id="main-logo"/><br><h2>Quality? Udi!</h2></div>
-        <div id="content1" class="content-box"><p>sample content</p></div>
+        <!--title/splash-->
+        <div id="splash"><img src="assets/Udi Main 1.png" id="main-logo" alt="Udi Logo"/><br><h2>Udi: Quality Tutoring.</h2><br><h4>Providing quality online tutoring for New Zealand students.</h4></div>
+
+        <!--first content box-->
+        <div class="content-box">
+            <p>Udi is a platform that connects students with tutors who are at a top level in their teaching subjects. We offer in-person tutoring in Auckland as well as online tutoring for students across the country. Have friends that you want to be tutored alongside with, or would you rather have multiple tutors to help you out? We also offer group tutoring for multiple students, or a student with multiple tutors to help students receive understanding from a broad range of perspectives.</p>
+            <div id="comparison">
+                <span class="compare"><h2>NCEA</h2><ul><li>English</li><li>Calculus</li><li>Physics</li></ul></span>
+                <span class="compare"><h2>CIE</h2><ul><li>English</li><li>Biology</li><li>Chemistry</li></ul></span>
+            </div>
+
+            <p>Want to know more? Book a <a href="">consulting session</a> with us now!</p>
+        </div>
 
     </div>
 </body>

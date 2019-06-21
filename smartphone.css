@@ -13,29 +13,36 @@ body{
     justify-items: center;
 }
 
-#header{
-    display: none;
-}
 
 .content-box{
     background-color: #F7F9F9;
     border: 1px solid #A0EBE6;
-    color: #CBCCCC;
-    font-family: Calibri;
+    color: #171717;
+    font-family: 'Roboto';
+    font-size: 18px;
     width: 100%;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+#header{
+    display: none;
 }
 
 #smartphone-nav{
-    width: 20px;
-    z-index: 2;
+    width: 40px;
+    z-index: 0;
+    align-self: start;
     position: fixed;
-    margin-left: 5px;
-    display: block;
-
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
 }
 
-#content1{
-    height: 900px;
+#dropdown{
+    display: flex;
+    flex-direction: column;
 }
 
 #splash{
@@ -48,10 +55,10 @@ body{
     font-family: 'Bree Serif';
     font-size: 40px;
     width: 100%;
-    background-image: url("assets/Main Page Maybe (2).png");
     background-size: cover;
     padding-top: 20vh;
     margin: 0;
+    text-align: center;
 }
 
 #main-logo{
