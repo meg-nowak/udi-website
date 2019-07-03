@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- code to be udi.nz
+    this will be the homepage.
+    code by Meg Nowak 2019 -->
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>udi</title>
+
+    <!--JQuery and bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--responsive stylesheets-->
+    <link rel="stylesheet" type="text/css" href="smartphone.css"/>
+    <link rel="stylesheet" type="text/css" href="responsive.css" media="screen and (min-width: 900px)"/>
+    <link rel="stylesheet" href="styles/nav.css" media="screen and (max-width: 900px)"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/Icon-Logo-(White-Inner).png"/>
+
+    <!--search engine data-->
+    <meta name="description" content="Udi is a platform that connects students with tutors. We offer in-person tutoring in Auckland and online tutoring for students across the country.">
+    <meta name="author" content="Udi">
+
+    <!--page specific styles-->
+    <style>
+
+        #splash{
+            background-image: url("assets/About Us Page.png");
+            height: 60vh;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div id="container">
+
+    <!--smartphone navigation (only visible on the smartphone version of the website)-->
+    <!--smartphone navbar by https://www.cssscript.com/basic-hamburger-toggle-menu-css-vanilla-javascript/-->
+    <div class="nav-toggle">
+        <div class="nav-toggle-bar"></div>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="mission.html">Our Mission</a></li>
+            <li><a href="#">Our Tutors</a></li>
+            <li><a href="#">Pricing and Plans</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Free Consultation</a></li>
+        </ul>
+    </nav>
+    <script src="scripts/nav.js"></script>
+
+    <!--desktop navigation-->
+    <div id="header">
+        <a href="index.html"><img src="assets/Name-Logo.png" id="logo" alt="Udi Logo"/></a>
+        <span class="nav-button" id="active">Our Mission</span>
+        <span class="nav-button">Our Tutors</span>
+        <span class="nav-button">Pricing and Plans</span>
+        <span class="nav-button">Contact Us</span>
+        <span class="nav-button">Free Consultation</span>
+    </div>
+
+    <!--title/splash-->
+    <div id="splash"><h2>Our Mission</h2><br><h4>Making quality tutoring accessible.</h4></div>
+
+    <!--first content box-->
+    <div class="content-box">
+        <p>Udi was founded in May 2019 to help New Zealand students excel academically through personalised tutoring. We understand that each student has their own way of learning and their own academic goals to strive for. Our role is to deliver the most bespoke education to them so that they can maximise their learning and conquer their goals.</p>
+        <ol>
+            <li>All of our tutors have achieved the highest grade in the subjects they teach. </li>
+            <li>Our tutors cut to the chase, simplify the complex, and are enthused about working with students to achieve their academic goals.</li>
+            <li>We have rigorously screened every tutor on their behaviour and conduct.</li>
+            <li>Our pricing is competitive and discounts are available for bulk purchases. </li>
+            <li>We offer nation-wide online tutoring and Auckland-based in-person tutoring.</li>
+            <li>Our students receive ongoing support and mentorship from their tutors. </li>
+        </ol>
+        <p>Total hours of tutoring completed by our tutors: 350 +</p>
+        <p>Want to know more? Book a <a href="">consulting session</a> with us now!</p>
+    </div>
+
+</div>
+</body>
+</html>
