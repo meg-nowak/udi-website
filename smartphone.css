@@ -16,12 +16,13 @@ body{
 
 .content-box{
     background-color: #F7F9F9;
-    border: 1px solid #A0EBE6;
     color: #171717;
     font-family: 'Roboto';
     font-size: 18px;
     width: 100%;
     padding: 20px;
+    padding-left: 60px ;
+    paddding-right: 60px ;
     margin: 0;
     text-align: center;
 }
@@ -30,20 +31,6 @@ body{
     display: none;
 }
 
-#smartphone-nav{
-    width: 40px;
-    z-index: 0;
-    align-self: start;
-    position: fixed;
-    margin-left: 10px;
-    margin-top: 10px;
-    border-radius: 20px;
-}
-
-#dropdown{
-    display: flex;
-    flex-direction: column;
-}
 
 #splash{
     display: flex;

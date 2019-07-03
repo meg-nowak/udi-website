@@ -10,16 +10,12 @@
     background-color: #F7F9F9;
     border-bottom: 1px solid #CBCCCC;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     position: fixed;
 }
 
-#smartphone-nav{
-    display: none;
-}
-
-.nav{
-    width: 11%;
+.nav-button{
+    width: 13%;
     font-family: 'Bree Serif';
     color: #2e2e2e;
     vertical-align: middle;
@@ -32,10 +28,19 @@
     transition: 0.5s background-color;
     cursor: pointer;
     font-size: 20px;
+    text-align: center;
 }
 
-.nav:hover{
+.nav-button:hover{
     background-color: #CBCCCC;
+}
+
+.nav{
+    display: none;
+}
+
+.nav-toggle{
+    display: none;
 }
 
 #logo{
