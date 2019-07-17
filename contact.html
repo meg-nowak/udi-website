@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- code to be udi.nz
-    this will be the "our mission" page.
+    this will be the contact us page.
     code by Meg Nowak 2019 -->
 
 <head>
@@ -33,8 +33,9 @@
     <style>
 
         #splash{
-            background-image: url("assets/About Us Page.png");
+            background-image: url("assets/FAQ maybe.png");
             height: 60vh;
+            color: #171717;
         }
 
     </style>
@@ -52,10 +53,10 @@
     <nav class="nav">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="mission.html">About Us</a></li>
+            <li><a href="mission.html">About Us</a></li>
             <li><a href="#">Our Tutors</a></li>
             <li><a href="#">Pricing and Plans</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li class="active"><a href="contact.html">Contact Us</a></li>
             <li><a href="#">Free Consultation</a></li>
         </ul>
     </nav>
@@ -64,30 +65,54 @@
     <!--desktop navigation-->
     <div id="header">
         <a href="index.html"><img src="assets/Name-Logo.png" id="logo" alt="Udi Logo"/></a>
-        <a href="mission.html"><div class="nav-button" id="active">About Us</div></a>
+        <a href="mission.html"><div class="nav-button">About Us</div></a>
         <div class="nav-button">Our Tutors</div>
         <div class="nav-button">Pricing and Plans</div>
-        <a href="contact.html"><div class="nav-button">Contact Us</div></a>
+        <a href="contact.html"><div class="nav-button" id="active">Contact Us</div></a>
         <div class="nav-button">Free Consultation</div>
     </div>
 
     <!--title/splash-->
-    <div id="splash"><h2>About Us</h2><br><h4>Making quality tutoring accessible.</h4></div>
+    <div id="splash"><h2 style="text-decoration:">Contact us</h2><br><h4>Want to book a session or become a tutor?</h4></div>
 
     <!--first content box-->
     <div class="content-box">
-        <p>Udi strives to ensure that every high-school student in New Zealand with an internet connection can have access to high-quality, personalised tutoring. </p>
-        <p>Udi was founded in May 2019 to help New Zealand students excel academically through personalised tutoring. We understand that each student has their own way of learning and their own academic goals to strive for. Our role is to deliver the most bespoke education to them so that they can maximise their learning and conquer their goals.</p>
-        <ol>
-            <li>All of our tutors have achieved the highest grade in the subjects they teach. </li>
-            <li>Our tutors cut to the chase, simplify the complex, and are enthused about working with students to achieve their academic goals.</li>
-            <li>We have rigorously screened every tutor on their behaviour and conduct.</li>
-            <li>Our pricing is competitive and discounts are available for bulk purchases. </li>
-            <li>We offer nation-wide online tutoring and Auckland-based in-person tutoring.</li>
-            <li>Our students receive ongoing support and mentorship from their tutors. </li>
-        </ol>
-        <p>Total hours of tutoring completed by our tutors: 350 +</p>
-        <p>Want to know more? Book a <a href="">consulting session</a> with us now!</p>
+        <p>If you have any questions, would like to book a tutoring session or would like to work with us; please use the contact form below. We will respond to your queries via email as soon as possible.</p>
+        <div id = "form-container">
+            <form id="book-session">
+                <p>To book tutoring, please fill out the contact form below and we’ll get in touch as soon as possible. If you do not choose a tutor, we will recommend one based on the student’s aim and circumstances.</p>
+                Name: <input type="text" name="name"/>
+                <br>
+                Email: <input type="email" name="Email"/>
+                <br>
+                Contact Phone Number: <input type="number" name="Phone"/>
+                <br>
+                Subjects for tutoring: <input type="text" name="Subjects">
+                <br>
+                Student circumstances [e.g. where the student is at now, what are their aims, and in what way do they want Udi to help): <input type="text" name="name"/>
+                <br>
+                <input type="submit" value="Submit"/>
+            </form>
+            <form id="become-tutor">
+                Name: <input type="text" name="name"/>
+                <br>
+                Email: <input type="email" name="Email"/>
+                <br>
+                Query: <input type="text" name="Query"/>
+                <br>
+                <input type="submit" value="Submit"/>
+            </form>
+            <form id="general">
+
+                Name: <input type="text" name="name"/>
+                <br>
+                Email: <input type="email" name="Email"/>
+                <br>
+                Query: <input type="text" name="Query"/>
+                <br>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
     </div>
 
 </div>

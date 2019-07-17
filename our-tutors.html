@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- code to be udi.nz
+    this will be the "our tutors" page.
+    code by Meg Nowak 2019 -->
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>udi</title>
+
+    <!--JQuery and bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--scripts-->
+    <script src="scripts/switch.js"></script>
+
+    <!--responsive stylesheets-->
+    <link rel="stylesheet" type="text/css" href="smartphone.css"/>
+    <link rel="stylesheet" type="text/css" href="responsive.css" media="screen and (min-width: 900px)"/>
+    <link rel="stylesheet" href="styles/nav.css" media="screen and (max-width: 900px)"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/Icon-Logo-(White-Inner).png"/>
+
+    <!--search engine data-->
+    <meta name="description" content="Udi is a platform that connects students with tutors. We offer in-person tutoring in Auckland and online tutoring for students across the country.">
+    <meta name="author" content="Udi">
+
+    <!--page specific styles-->
+    <style>
+        #title{
+            padding-top: 100px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 90px;
+            height: 34px;
+        }
+
+        .switch input {display:none;}
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ca2222;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2ab934;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(57px);
+            -ms-transform: translateX(57px);
+            transform: translateX(57px);
+        }
+
+        .ncea-slider
+        {
+            display: none;
+        }
+
+        .ncea-slider, .cie-slider
+        {
+            color: white;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            font-size: 10px;
+            font-family: Verdana, sans-serif;
+        }
+
+        input:checked+ .slider .ncea-slider
+        {display: block;}
+
+        input:checked + .slider .cie-slider
+        {display: none;}
+
+        #NCEAtutors{
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div id="container">
+
+    <!--smartphone navigation (only visible on the smartphone version of the website)-->
+    <!--smartphone navbar adapted from https://www.cssscript.com/basic-hamburger-toggle-menu-css-vanilla-javascript/-->
+    <div class="nav-toggle">
+        <div class="nav-toggle-bar"></div>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="mission.html">About Us</a></li>
+            <li><a href="#">Our Tutors</a></li>
+            <li><a href="#">Pricing and Plans</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Free Consultation</a></li>
+        </ul>
+    </nav>
+    <script src="scripts/nav.js"></script>
+
+    <!--desktop navigation-->
+    <div id="header">
+        <a href="index.html"><img src="assets/Name-Logo.png" id="logo" alt="Udi Logo"/></a>
+        <a href="mission.html"><div class="nav-button">About Us</div></a>
+        <div class="nav-button" id="active">Our Tutors</div>
+        <div class="nav-button">Pricing and Plans</div>
+        <a href="contact.html"><div class="nav-button">Contact Us</div></a>
+        <div class="nav-button">Free Consultation</div>
+    </div>
+
+    <!--title area of page- includes ncea/cie slider-->
+    <div id="title">
+        <h1>Our Tutors</h1>
+        <p id="switchDescriptor"></p>
+        <label class="switch">
+            <input type="checkbox" id="togBtn" onchange="changeTutors()">
+            <div class="slider">
+                <span class="ncea-slider">NCEA</span><span class="cie-slider">CIE</span>
+            </div>
+        </label>
+    </div>
+
+    <!--NCEA tutors-->
+    <div id="NCEAtutors">
+        <div class="tutor-info">
+            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+        </div>
+
+        <div class="tutor-info">
+            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+        </div>
+
+        <div class="tutor-info">
+            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+        </div>
+
+        <div class="tutor-info">
+            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+        </div>
+    </div>
+
+    <!--CIE tutors-->
+    <div id="CIEtutors">
+        <div class="tutor-info">
+            <div class="tutor-info-left"><h1>Sohn Jith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+        </div>
+
+        <div class="tutor-info">
+            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+        </div>
+
+        <div class="tutor-info">
+            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+        </div>
+
+        <div class="tutor-info">
+            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
