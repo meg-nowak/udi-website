@@ -55,7 +55,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="mission.html">About Us</a></li>
             <li><a href="#">Our Tutors</a></li>
-            <li><a href="#">Pricing and Plans</a></li>
             <li class="active"><a href="contact.html">Contact Us</a></li>
             <li><a href="#">Free Consultation</a></li>
         </ul>
@@ -67,7 +66,6 @@
         <a href="index.html"><img src="assets/Name-Logo.png" id="logo" alt="Udi Logo"/></a>
         <a href="mission.html"><div class="nav-button">About Us</div></a>
         <div class="nav-button">Our Tutors</div>
-        <div class="nav-button">Pricing and Plans</div>
         <a href="contact.html"><div class="nav-button" id="active">Contact Us</div></a>
         <div class="nav-button">Free Consultation</div>
     </div>
@@ -79,37 +77,60 @@
     <div class="content-box">
         <p>If you have any questions, would like to book a tutoring session or would like to work with us; please use the contact form below. We will respond to your queries via email as soon as possible.</p>
         <div id = "form-container">
-            <form id="book-session">
-                <p>To book tutoring, please fill out the contact form below and we’ll get in touch as soon as possible. If you do not choose a tutor, we will recommend one based on the student’s aim and circumstances.</p>
-                Name: <input type="text" name="name"/>
-                <br>
-                Email: <input type="email" name="Email"/>
-                <br>
-                Contact Phone Number: <input type="number" name="Phone"/>
-                <br>
-                Subjects for tutoring: <input type="text" name="Subjects">
-                <br>
-                Student circumstances [e.g. where the student is at now, what are their aims, and in what way do they want Udi to help): <input type="text" name="name"/>
-                <br>
+            <form method="POST" name="contactform" action="mailprocessing.php" id="book-session">
+                <h3>Book a tutoring session</h3>
+                <p>
+                    <label for='name'>Name:</label> <br>
+                    <input type="text" name="name">
+                </p>
+                <p>
+                    <label for='email'>Email Address:</label> <br>
+                    <input type="text" name="email"> <br>
+                </p>
+                <p>
+                    <label for='phone'>Contact Phone Number:</label> <br>
+                    <input type="number" name="phone"> <br>
+                </p>
+                <p>
+                    <label for='subjects'>Subjects for tutoring:</label> <br>
+                    <input type="text" name="subjects"> <br>
+                </p>
+                <p>
+                    <label for='message'>Student circumstances [e.g. where the student is at now, what are their aims, and in what way do they want Udi to help):</label> <br>
+                    <textarea name="message"></textarea>
+                </p>
+                <input type="submit" value="Submit"><br>
+            </form>
+            <form method="POST" name="contactform" action="mailprocessing.php" id="become-tutor">
+                <h3>Become a tutor with us</h3>
+                <p>
+                    <label for='name'>Name:</label> <br>
+                    <input type="text" name="name">
+                </p>
+                <p>
+                    <label for='email'>Email Address:</label> <br>
+                    <input type="text" name="email"> <br>
+                </p>
+                <p>
+                    <label for='email'>Query:</label> <br>
+                    <input type="text" name="query"> <br>
+                </p>
                 <input type="submit" value="Submit"/>
             </form>
-            <form id="become-tutor">
-                Name: <input type="text" name="name"/>
-                <br>
-                Email: <input type="email" name="Email"/>
-                <br>
-                Query: <input type="text" name="Query"/>
-                <br>
-                <input type="submit" value="Submit"/>
-            </form>
-            <form id="general">
-
-                Name: <input type="text" name="name"/>
-                <br>
-                Email: <input type="email" name="Email"/>
-                <br>
-                Query: <input type="text" name="Query"/>
-                <br>
+            <form method="POST" name="contactform" action="mailprocessing.php" id="general">
+                <h3>General Enquiries</h3>
+                <p>
+                    <label for='name'>Name:</label> <br>
+                    <input type="text" name="name">
+                </p>
+                <p>
+                    <label for='email'>Email Address:</label> <br>
+                    <input type="text" name="email"> <br>
+                </p>
+                <p>
+                    <label for='email'>Query:</label> <br>
+                    <input type="text" name="query"> <br>
+                </p>
                 <input type="submit" value="Submit"/>
             </form>
         </div>

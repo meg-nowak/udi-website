@@ -38,6 +38,10 @@
             padding-top: 100px;
         }
 
+        #header{
+            z-index: 4;
+        }
+
         .switch {
             position: relative;
             display: inline-block;
@@ -103,14 +107,47 @@
             font-family: Verdana, sans-serif;
         }
 
-        input:checked+ .slider .ncea-slider
-        {display: block;}
+        input:checked + .slider .ncea-slider
+        {display: flex;}
 
         input:checked + .slider .cie-slider
         {display: none;}
 
-        #NCEAtutors{
+        #NCEAtutors {
             display: none;
+            width: 100%;
+            align-content: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #CIEtutors{
+            width: 100%;
+            align-content: center;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .tutor-info{
+            border-radius: 10px;
+            border: 1px solid #CBCCCC;
+            background-color: #F7F9F9;
+            padding: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 320px;
+        }
+
+        #tutorContainer{
+            justify-content: space-evenly;
+            display: flex;
+            align-items: stretch;
+            flex-direction: column;
+            width: 100%;
         }
 
     </style>
@@ -130,7 +167,6 @@
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="mission.html">About Us</a></li>
             <li><a href="#">Our Tutors</a></li>
-            <li><a href="#">Pricing and Plans</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="#">Free Consultation</a></li>
         </ul>
@@ -159,49 +195,51 @@
         </label>
     </div>
 
-    <!--NCEA tutors-->
-    <div id="NCEAtutors">
-        <div class="tutor-info">
-            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
-            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+    <div id="tutorContainer">
+        <!--NCEA tutors-->
+        <div id="NCEAtutors">
+            <div class="tutor-info">
+                <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+                <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+            </div>
+
+            <div class="tutor-info">
+                <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+                <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+            </div>
+
+            <div class="tutor-info">
+                <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+                <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+            </div>
+
+            <div class="tutor-info">
+                <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+                <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+            </div>
         </div>
 
-        <div class="tutor-info">
-            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
-            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
-        </div>
+        <!--CIE tutors-->
+        <div id="CIEtutors">
+            <div class="tutor-info">
+                <div class="tutor-info-left"><h1>Osama Khasif</h1><h3>University of Auckland</h3></div>
+                <div class="tutor-info-right"><p>Hi, I'm Osama. I am currently studying engineering at the University of Auckland. I have been a Cambridge student achieving 4 A*'s, 1 A, and 1 B at A levels; with an A* in mathematics, and achieving NZQA scholarship for calculus. I have taken part in various mathematics competitions and societies. In addition to which, I have extensive tutoring experience through my voluntary work as a mentor and job as a tutor. I like being able to convey mathematical concepts to students wanting to learn more about it or struggling with it. I am not afraid of challenges arising from the differing thought processes of students, I face those challenges and work along with the students for their improvement. I enjoy the accomplishment of being able to explain and teach a concept to a student.</p><br><h3>$55/hr Standard Session</h3></div>
+            </div>
 
-        <div class="tutor-info">
-            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
-            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
-        </div>
+            <div class="tutor-info">
+                <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+                <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+            </div>
 
-        <div class="tutor-info">
-            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
-            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
-        </div>
-    </div>
+            <div class="tutor-info">
+                <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+                <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+            </div>
 
-    <!--CIE tutors-->
-    <div id="CIEtutors">
-        <div class="tutor-info">
-            <div class="tutor-info-left"><h1>Sohn Jith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
-            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
-        </div>
-
-        <div class="tutor-info">
-            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
-            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
-        </div>
-
-        <div class="tutor-info">
-            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
-            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
-        </div>
-
-        <div class="tutor-info">
-            <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
-            <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+            <div class="tutor-info">
+                <div class="tutor-info-left"><h1>John Smith</h1><img src="" alt=""/><h3>University of Auckland</h3></div>
+                <div class="tutor-info-right"><p>Lorem ipsum dolor sit amet</p><br><h3>$55/hr Standard Session</h3><h3>$55/hr Scholarship Session</h3></div>
+            </div>
         </div>
     </div>
 
